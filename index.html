@@ -3,13 +3,13 @@
 <body>
   <script>
     function playTada() {
-        <audio src="http://nachopark.github.io/helloworld/Tada.mp3" autoplay>
-          <p>If you are reading this, it is because your browser does not support the audio element.     </p>
-        </audio>
+      document.getElementById("tada").play();
     }
   </script>
   <img src="http://nachopark.github.io/helloworld/Perry.jpg" onclick="playTada()">
-
+  <audio id="tada" src="http://nachopark.github.io/helloworld/Tada.mp3">
+    <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+  </audio>
   <!--<script> 
     myVar = prompt("Give me some info:");
     confirm(myVar);
