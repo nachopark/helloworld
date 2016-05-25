@@ -1,4 +1,15 @@
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
 .letters {
     background-color: linen;
     font-size: 30px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
 }
