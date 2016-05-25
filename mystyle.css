@@ -1,3 +1,7 @@
+* {
+    border-style: dashed;
+}
+
 .right {
     float: right;
 }
