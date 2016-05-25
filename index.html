@@ -6,13 +6,19 @@
       function playTada() {
         document.getElementById("tada").play();
       }
+      function letterPress(letter) {
+        var text = document.getElementById("textbox").innerHTML;
+        text = text + letter;
+        document.getElementById("textbox").innerHTML=text;
+      }
+      }
     </script>
   </head>
   <body>
     <div class="left">
       <table>
         <tr>
-          <td><div id="A" class="letters">A</div></td>
+          <td><div id="A" class="letters" onclick="letterPress(this)">A</div></td>
           <td><div id="B" class="letters">B</div></td>
           <td><div id="C" class="letters">C</div></td>
           <td><div id="D" class="letters">D</div></td>
