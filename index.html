@@ -11,11 +11,31 @@
         document.getElementById("sound").src="http://nachopark.github.io/helloworld/"+letterElem.innerHTML+".wav";
         document.getElementById("sound").play();
       }
+      function checkTextForWord() {
+        var text = document.getElementById("textbox").innerHTML;
+        switch(text) {
+          case "SCOTT":
+            document.getElementById("picture").src="http://nachopark.github.io/helloworld/Perry.jpg";
+            playTada();
+            break;
+          case "JONAH":
+            document.getElementById("picture").src="http://nachopark.github.io/helloworld/Perry.jpg";
+            playTada();
+            break;
+          case "PERRY":
+            document.getElementById("picture").src="http://nachopark.github.io/helloworld/Perry.jpg";
+            playTada();
+            break;
+          default:
+            default code block
+}
+      }
       function letterPress(letterElem) {
         var text = document.getElementById("textbox").innerHTML;
         text = text + letterElem.innerHTML;
         document.getElementById("textbox").innerHTML=text;
         playLetter(letterElem);
+        checkTextForWord();
       }
       function clearPress() {
         document.getElementById("textbox").innerHTML="";
@@ -65,10 +85,10 @@
           <td colspan="4"><div class="clear" onclick="clearPress()">Clear</div></td>
         </tr>
       </table>
-      <div id="textbox">test</div>
+      <div id="textbox"></div>
     </div>
     <div class=right>
-      <img src="http://nachopark.github.io/helloworld/Perry.jpg" height = "400" width = "300" onclick="playTada()">
+      <img id="picture" height = "400" width = "300" onclick="playTada()">
     </div>
     <audio id="sound">
       <p>If you are reading this, it is because your browser does not support the audio element.     </p>
