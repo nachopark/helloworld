@@ -38,7 +38,7 @@
         text = text + letterElem.innerHTML;
         document.getElementById("textbox").innerHTML=text;
         playLetter(letterElem);
-        checkTextForWord();
+        setTimeout(checkTextForWord(),250);
       }
       function clearPress() {
         document.getElementById("textbox").innerHTML="";
