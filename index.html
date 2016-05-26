@@ -10,7 +10,8 @@
       function playLetter(letterElem) {
         document.getElementById("sound").src="http://nachopark.github.io/helloworld/"+letterElem.innerHTML+".wav";
         document.getElementById("sound").play();
-        while (!document.getElementById("sound").ended) {}
+        document.getElementById("debug").innerHTML=document.getElementById("sound").ended;
+        // while (!document.getElementById("sound").ended) {}
       }
       function checkTextForWord() {
         var text = document.getElementById("textbox").innerHTML;
@@ -89,6 +90,7 @@
         </tr>
       </table>
       <div id="textbox"></div>
+      <div id="debug">Debug</div>
     </div>
     <div class=right>
       <img id="picture" height = "400" width = "300" onclick="playTada()">
