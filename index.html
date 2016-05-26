@@ -3,7 +3,9 @@
   <head>
     <link rel="stylesheet" type="text/css" href="http://nachopark.github.io/helloworld/mystyle.css">
     <script>
-      document.getElementById("lettersound").onended=checkTextForWord();
+      function configuration() {
+        document.getElementById("lettersound").onended=checkTextForWord();
+      }
       function playTada() {
         document.getElementById("tadasound").play();
       }
@@ -44,7 +46,7 @@
       }
     </script>
   </head>
-  <body>
+  <body onload="configuration()">
     <div class="left">
       <table>
         <tr>
@@ -88,7 +90,7 @@
         </tr>
       </table>
       <div id="textbox"></div>
-      <div id="debug">Debug Ver 1.0</div>
+      <div id="debug">Debug Ver 1.01</div>
     </div>
     <div class=right>
       <img id="picture" height = "400" width = "300">
