@@ -3,30 +3,28 @@
   <head>
     <link rel="stylesheet" type="text/css" href="http://nachopark.github.io/helloworld/mystyle.css">
     <script>
+      document.getElementById("lettersound").onended=checkTextForWord();
       function playTada() {
-        document.getElementById("sound").src="http://nachopark.github.io/helloworld/Tada.mp3";
-        document.getElementById("sound").play();
+        document.getElementById("tadasound").play();
       }
       function playLetter(letterElem) {
-        document.getElementById("sound").src="http://nachopark.github.io/helloworld/"+letterElem.innerHTML+".wav";
-        document.getElementById("sound").play();
-        document.getElementById("debug").innerHTML=document.getElementById("sound").ended;
-        // while (!document.getElementById("sound").ended) {}
+        document.getElementById("lettersound").src="http://nachopark.github.io/helloworld/"+letterElem.innerHTML+".wav";
+        document.getElementById("lettersound").play();
       }
       function checkTextForWord() {
         var text = document.getElementById("textbox").innerHTML;
         switch(text) {
           case "SCOTT":
             document.getElementById("picture").src="http://nachopark.github.io/helloworld/Perry.jpg";
-            setTimeout(playTada(),4000);
+            playTada();
             break;
           case "JONAH":
             document.getElementById("picture").src="http://nachopark.github.io/helloworld/Perry.jpg";
-            setTimeout(playTada(),4000);
+            playTada();
             break;
           case "PERRY":
             document.getElementById("picture").src="http://nachopark.github.io/helloworld/Perry.jpg";
-            setTimeout(playTada(),4000);
+            playTada();
             break;
           default:
             document.getElementById("picture").src="";
@@ -38,7 +36,7 @@
         text = text + letterElem.innerHTML;
         document.getElementById("textbox").innerHTML=text;
         playLetter(letterElem);
-        checkTextForWord();
+        //checkTextForWord();
       }
       function clearPress() {
         document.getElementById("textbox").innerHTML="";
@@ -90,12 +88,15 @@
         </tr>
       </table>
       <div id="textbox"></div>
-      <div id="debug">Debug</div>
+      <div id="debug">Debug Ver 1.0</div>
     </div>
     <div class=right>
       <img id="picture" height = "400" width = "300">
     </div>
-    <audio id="sound">
+    <audio id="tadasound" src="http://nachopark.github.io/helloworld/Tada.mp3">
+      <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+    </audio>
+    <audio id="lettersound">
       <p>If you are reading this, it is because your browser does not support the audio element.     </p>
     </audio>
     <!--<script> 
