@@ -10,6 +10,7 @@
       function playLetter(letterElem) {
         document.getElementById("sound").src="http://nachopark.github.io/helloworld/"+letterElem.innerHTML+".wav";
         document.getElementById("sound").play();
+        while (!document.getElementById("sound").ended) {}
       }
       function checkTextForWord() {
         var text = document.getElementById("textbox").innerHTML;
@@ -27,6 +28,7 @@
             playTada();
             break;
           default:
+            document.getElementById("picture").src="";
             break;
         }
       }
@@ -39,6 +41,7 @@
       }
       function clearPress() {
         document.getElementById("textbox").innerHTML="";
+        document.getElementById("picture").src="";
       }
     </script>
   </head>
