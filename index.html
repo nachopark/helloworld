@@ -5,7 +5,7 @@
     <script>
       function playTada() {
         document.getElementById("sound").src="http://nachopark.github.io/helloworld/Tada.mp3";
-        document.getElementById("sound").play();
+        setTimeout(document.getElementById("sound").play(),1000);
       }
       function playLetter(letterElem) {
         document.getElementById("sound").src="http://nachopark.github.io/helloworld/"+letterElem.innerHTML+".wav";
@@ -38,7 +38,7 @@
         text = text + letterElem.innerHTML;
         document.getElementById("textbox").innerHTML=text;
         playLetter(letterElem);
-        setTimeout(checkTextForWord(),250);
+        checkTextForWord();
       }
       function clearPress() {
         document.getElementById("textbox").innerHTML="";
