@@ -4,12 +4,18 @@
     <link rel="stylesheet" type="text/css" href="http://nachopark.github.io/helloworld/mystyle.css">
     <script>
       function playTada() {
-        document.getElementById("tada").play();
+        document.getElementById("sound").src="http://nachopark.github.io/helloworld/Tada.mp3";
+        document.getElementById("sound").play();
+      }
+      function playLetter(letterElem) {
+        document.getElementById("sound").src="http://nachopark.github.io/helloworld/"+letterElem.innerHTML+".wav";
+        document.getElementById("sound").play();
       }
       function letterPress(letterElem) {
         var text = document.getElementById("textbox").innerHTML;
         text = text + letterElem.innerHTML;
         document.getElementById("textbox").innerHTML=text;
+        playLetter(letterElem);
       }
       function clearPress() {
         document.getElementById("textbox").innerHTML="";
@@ -64,7 +70,7 @@
     <div class=right>
       <img src="http://nachopark.github.io/helloworld/Perry.jpg" height = "400" width = "300" onclick="playTada()">
     </div>
-    <audio id="tada" src="http://nachopark.github.io/helloworld/Tada.mp3">
+    <audio id="sound">
       <p>If you are reading this, it is because your browser does not support the audio element.     </p>
     </audio>
     <!--<script> 
