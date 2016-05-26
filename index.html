@@ -5,7 +5,7 @@
     <script>
       function playTada() {
         document.getElementById("sound").src="http://nachopark.github.io/helloworld/Tada.mp3";
-        setTimeout(document.getElementById("sound").play(),1000);
+        document.getElementById("sound").play();
       }
       function playLetter(letterElem) {
         document.getElementById("sound").src="http://nachopark.github.io/helloworld/"+letterElem.innerHTML+".wav";
@@ -18,15 +18,15 @@
         switch(text) {
           case "SCOTT":
             document.getElementById("picture").src="http://nachopark.github.io/helloworld/Perry.jpg";
-            playTada();
+            setTimeout(playTada(),1000);
             break;
           case "JONAH":
             document.getElementById("picture").src="http://nachopark.github.io/helloworld/Perry.jpg";
-            playTada();
+            setTimeout(playTada(),1000);
             break;
           case "PERRY":
             document.getElementById("picture").src="http://nachopark.github.io/helloworld/Perry.jpg";
-            playTada();
+            setTimeout(playTada(),1000);
             break;
           default:
             document.getElementById("picture").src="";
@@ -93,7 +93,7 @@
       <div id="debug">Debug</div>
     </div>
     <div class=right>
-      <img id="picture" height = "400" width = "300" onclick="playTada()">
+      <img id="picture" height = "400" width = "300">
     </div>
     <audio id="sound">
       <p>If you are reading this, it is because your browser does not support the audio element.     </p>
