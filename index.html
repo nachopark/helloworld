@@ -7,7 +7,7 @@
         document.getElementById("lettersound").onended=function(){
           checkTextForWord();
         };
-        alert("Page is configured");
+        //alert("Page is configured");
       }
       function playTada() {
         document.getElementById("tadasound").play();
@@ -19,12 +19,20 @@
       function checkTextForWord() {
         var text = document.getElementById("textbox").innerHTML;
         switch(text) {
+          case "DADDY":
+            document.getElementById("picture").src="http://nachopark.github.io/helloworld/Daddy.jpg";
+            playTada();
+            break;
+          case "MOMMY":
+            document.getElementById("picture").src="http://nachopark.github.io/helloworld/Mommy.jpg";
+            playTada();
+            break;
           case "SCOTT":
-            document.getElementById("picture").src="http://nachopark.github.io/helloworld/Perry.jpg";
+            document.getElementById("picture").src="http://nachopark.github.io/helloworld/Scott.jpg";
             playTada();
             break;
           case "JONAH":
-            document.getElementById("picture").src="http://nachopark.github.io/helloworld/Perry.jpg";
+            document.getElementById("picture").src="http://nachopark.github.io/helloworld/Jonah.jpg";
             playTada();
             break;
           case "PERRY":
@@ -93,7 +101,7 @@
         </tr>
       </table>
       <div id="textbox"></div>
-      <div id="debug">Debug Ver 1.04</div>
+      <div id="debug">Debug Ver 1.05</div>
     </div>
     <div class=right>
       <img id="picture" height = "400" width = "300">
