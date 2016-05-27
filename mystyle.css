@@ -12,10 +12,10 @@
 
 .letters {
     background-color: linen;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
     border-radius: 5px;
-    padding: 10px;
+    padding: 30px;
 }
 .clear {
     background-color: green;
