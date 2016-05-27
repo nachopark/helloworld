@@ -3,12 +3,6 @@
   <head>
     <link rel="stylesheet" type="text/css" href="http://nachopark.github.io/helloworld/mystyle.css">
     <script>
-      function configuration() {
-        document.getElementById("lettersound").onended=function(){
-          checkTextForWord();
-        };
-        //alert("Page is configured");
-      }
       function playTada() {
         document.getElementById("tadasound").play();
       }
@@ -49,7 +43,7 @@
         text = text + letterElem.innerHTML;
         document.getElementById("textbox").innerHTML=text;
         playLetter(letterElem);
-        //checkTextForWord();
+        checkTextForWord();
       }
       function clearPress() {
         document.getElementById("textbox").innerHTML="";
@@ -57,7 +51,7 @@
       }
     </script>
   </head>
-  <body onload="configuration()">
+  <body>
     <div class="left">
       <table>
         <tr>
@@ -101,7 +95,7 @@
         </tr>
       </table>
       <div id="textbox"></div>
-      <div id="debug">Debug Ver 1.06</div>
+      <div id="debug">Debug Ver 1.07</div>
     </div>
     <div class=right>
       <img id="picture" height = "400" width = "300">
