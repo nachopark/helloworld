@@ -12,13 +12,14 @@
 
 .letters {
     background-color: linen;
-    font-size: 45px;
+    font-size: 50px;
     text-align: center;
     vertical-align: middle;
     border-radius: 10px;
     padding: 10px;
     height: 80px;
     width: 80px;
+    display: table-cell;
 }
 .clear {
     background-color: green;
