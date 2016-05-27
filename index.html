@@ -40,10 +40,15 @@
       }
       function letterPress(letterElem) {
         var text = document.getElementById("textbox").innerHTML;
-        text = text + letterElem.innerHTML;
-        document.getElementById("textbox").innerHTML=text;
-        playLetter(letterElem);
-        checkTextForWord();
+        if (text.length<13){
+          text = text + letterElem.innerHTML;
+          document.getElementById("textbox").innerHTML=text;
+          playLetter(letterElem);
+          checkTextForWord();
+        }
+        else {
+          clearPress();
+        }
       }
       function clearPress() {
         document.getElementById("textbox").innerHTML="";
@@ -96,7 +101,7 @@
           <td colspan="4"><div class="clear" onclick="clearPress()">CLEAR</div></td>
         </tr>
       </table>
-      <div id="debug">Debug Ver 1.14</div>
+      <div id="debug">Debug Ver 1.15</div>
     </div>
     <audio id="tadasound" src="http://nachopark.github.io/helloworld/Tada.mp3">
       <p>If you are reading this, it is because your browser does not support the audio element.     </p>
