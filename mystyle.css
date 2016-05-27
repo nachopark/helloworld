@@ -36,7 +36,7 @@
 }
 #picturebox {
     width: 500px;
-    height 400px;
+    height 420px;
 }
 #picture {
     display: block;
@@ -44,4 +44,5 @@
     max-height:400px;
     width: auto;
     height: auto;
+    align: middle;
 }
