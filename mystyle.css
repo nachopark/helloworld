@@ -20,7 +20,7 @@
     border-radius: 10px;
     padding: 10px;
     height: 60px;
-    width: 320px;
+    width: 340px;
     display: table-cell;
 }
 #textbox {
@@ -36,7 +36,7 @@
 }
 #picturebox {
     width: 500px;
-    height 500px;
+    height 400px;
 }
 #picture {
     display: block;
