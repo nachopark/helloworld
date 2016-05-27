@@ -36,12 +36,12 @@
 }
 #picturebox {
     width: 500px;
-    height 420px;
+    height 440px;
 }
 #picture {
     display: block;
-    max-width:500px;
-    max-height:400px;
+    max-width:480px;
+    max-height:440px;
     width: auto;
     height: auto;
     margin-left: auto;
