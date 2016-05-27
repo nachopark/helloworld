@@ -1,15 +1,6 @@
 * {
-    border-style: dotted;
+    border-style: none;
 }
-
-.right {
-    float: right;
-}
-
-.left {
-    float: left;
-}
-
 .letters {
     background-color: linen;
     font-size: 50px;
@@ -27,6 +18,15 @@
     text-align: center;
     border-radius: 5px;
     padding: 10px;
+}
+#textbox {
+    background-color: blue;
+    font-size: 50px;
+    width:500px;
+}
+#picturebox {
+    width: 500px;
+    height 500px;
 }
 #picture {
     display: block;
