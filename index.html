@@ -8,7 +8,7 @@
         document.getElementById("tadasound").play();
       }
       function playLetter(letterElem) {
-        document.getElementById("lettersound").src="http://nachopark.github.io/helloworld/"+letterElem.innerHTML+".wav";
+        document.getElementById("lettersound").src=letterElem.innerHTML+".wav";
         document.getElementById("lettersound").play();
       }
       function checkTextForWord() {
@@ -111,7 +111,7 @@
           <td colspan="2"><div class="clear" onclick="clearPress()">CLR</div></td>
         </tr>
       </table>
-      <div id="debug">Debug Ver 1.19</div>
+      <div id="debug">Debug Ver 1.20</div>
     </div>
     <audio id="tadasound" src="Tada.mp3">
       <p>If you are reading this, it is because your browser does not support the audio element.     </p>
