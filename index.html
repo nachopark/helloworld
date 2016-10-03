@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="http://nachopark.github.io/helloworld/mystyle.css">
+    <!--link rel="stylesheet" type="text/css" href="http://nachopark.github.io/helloworld/mystyle.css"-->
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
     <script>
       function playTada() {
         document.getElementById("tadasound").play();
@@ -40,6 +41,7 @@
       }
       function letterPress(letterElem) {
         var text = document.getElementById("textbox").innerHTML;
+		document.getElementById("picture").src="";
         if (text.length<13){
           text = text + letterElem.innerHTML;
           document.getElementById("textbox").innerHTML=text;
@@ -53,6 +55,13 @@
       function clearPress() {
         document.getElementById("textbox").innerHTML="";
         document.getElementById("picture").src="";
+      }
+	  function deletePress() {
+		var text = document.getElementById("textbox").innerHTML;
+		text = text.substr(0,text.length-1);
+		document.getElementById("textbox").innerHTML=text;
+        document.getElementById("picture").src="";
+		checkTextForWord();
       }
     </script>
   </head>
@@ -98,7 +107,8 @@
         </tr>
         <tr>
           <td><div id="Z" class="letters" onclick="letterPress(this)">Z</div></td>
-          <td colspan="4"><div class="clear" onclick="clearPress()">CLEAR</div></td>
+          <td colspan="2"><div class="BKSP" onclick="deletePress()">DEL</div></td>
+          <td colspan="2"><div class="clear" onclick="clearPress()">CLR</div></td>
         </tr>
       </table>
       <div id="debug">Debug Ver 1.16</div>

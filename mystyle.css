@@ -20,7 +20,18 @@
     border-radius: 10px;
     padding: 10px;
     height: 60px;
-    width: 330px;
+    width: 150px;
+    display: table-cell;
+}
+.BKSP {
+    background-color: tomato;
+    font-size: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    padding: 10px;
+    height: 60px;
+    width: 150px;
     display: table-cell;
 }
 #textbox {
